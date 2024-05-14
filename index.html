@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Advise Generator</title>
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   </head>
   <body>
     <div class="container">
@@ -12,16 +13,17 @@
         <h1>Welcome to my AI Advice Generator</h1>
       </header>
       <main>
-        <form>
+        <form id="advice-generator-form">
           <input
             type="text"
             placeholder="On which topic do you need advice?"
             autofocus
+            required
             class="input"
           />
           <input type="submit" value="Submit" class="submit-button" />
         </form>
-        <div class="advice-container">Go to school</div>
+        <div class="advice-container"></div>
       </main>
 
       <footer>
