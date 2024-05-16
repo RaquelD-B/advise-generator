@@ -1,5 +1,4 @@
 function displayAdvice(response) {
-  console.log("loading advice");
   new Typewriter(".advice-container", {
     strings: response.data.answer,
     autoStart: true,
@@ -12,6 +11,9 @@ function displayAdvice(response) {
 function generateAdvice(event) {
   event.preventDefault();
   let inputElement = document.querySelector("#input");
+  let adviceElement = document.querySelector(".advice-container");
+  adviceElement.classList.remove("hidden");
+  adviceElement.innerHTML = `<div class="blink">⌛Generating a good advice about ${inputElement.value}</div>`;
   let apikey = "adf0eeed55ed6d4256b9b3ft0e49cc9o";
   let prompt = `Provide an advice about ${inputElement.value} `;
   let context =
@@ -19,7 +21,6 @@ function generateAdvice(event) {
   let url = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apikey}`;
 
   axios.get(url).then(displayAdvice);
-  console.log("Getting info");
 }
 
 let adviceFormElement = document.querySelector("#advice-generator-form");

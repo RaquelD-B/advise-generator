@@ -14,18 +14,21 @@
         <h1>Welcome to my AI Advice Generator</h1>
       </header>
       <main>
-        <form id="advice-generator-form">
-          <input
-            type="text"
-            placeholder="On which topic do you need advice?"
-            autofocus
-            required
-            class="input"
-            id="input"
-          />
-          <input type="submit" value="Submit" class="submit-button" />
-        </form>
-        <div class="advice-container"></div>
+        <div class="form-wrapper">
+          <form id="advice-generator-form">
+            <input
+              type="text"
+              placeholder="On which topic do you need advice?"
+              autofocus
+              required
+              class="input"
+              id="input"
+            />
+            <input type="submit" value="Submit" class="submit-button" />
+          </form>
+          <small>i.e. "job interview, children, travelling"</small>
+        </div>
+        <div class="advice-container hidden"></div>
       </main>
 
       <footer>
