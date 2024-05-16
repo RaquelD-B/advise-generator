@@ -52,6 +52,13 @@ footer {
   font-size: 13px;
 }
 
+.advice-container div {
+  color: #27b936 !important;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+}
+
 a {
   color: #27b936;
 }
